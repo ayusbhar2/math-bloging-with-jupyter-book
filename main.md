@@ -243,4 +243,7 @@ will produce:
 
 You can also reference equations easily. Use ```{eq}`eq1` ``` to reference {eq}`eq1` and ```{eq}`eq2` ``` to reference {eq}`eq2`.
 
+## Definitions, Theorems and Proofs
+
+
 
