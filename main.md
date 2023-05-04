@@ -267,7 +267,7 @@ cp -R ./_build/_page/main/html/* ./docs
 touch ./docs/.nojekyll
 ```
 
-- Finally, push the changes to GitHub and configure GitHub Pages to render the website.
+- Finally, push the changes to GitHub and [configure GitHub Pages to render the website](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 
 
