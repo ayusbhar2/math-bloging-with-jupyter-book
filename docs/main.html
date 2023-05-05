@@ -309,6 +309,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-theorems-and-proofs">Definitions, Theorems and Proofs</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-the-blog-post">Publishing the blog post</a></li>
 </ul>
 
             </nav>
@@ -540,6 +541,33 @@ Ax = b
 <h2>Definitions, Theorems and Proofs<a class="headerlink" href="#definitions-theorems-and-proofs" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="publishing-the-blog-post">
+<h1>Publishing the blog post<a class="headerlink" href="#publishing-the-blog-post" title="Permalink to this heading">#</a></h1>
+<p>We will use Github Pages to publish our post. Once we are ready to publish the post, do the following things:</p>
+<ul class="simple">
+<li><p>Make sure to build the post one last time</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="n">main</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Move the contents of the <code class="docutils literal notranslate"><span class="pre">_build/_page/main/html</span></code> folder into a <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder directly under the project root folder.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">docs</span>
+
+<span class="n">cp</span> <span class="o">-</span><span class="n">R</span> <span class="o">./</span><span class="n">_build</span><span class="o">/</span><span class="n">_page</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">html</span><span class="o">/*</span> <span class="o">./</span><span class="n">docs</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file alongside our content files so that GitHub Pages treats our post as a static HTML website</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="o">./</span><span class="n">docs</span><span class="o">/.</span><span class="n">nojekyll</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Finally, push the changes to GitHub and <a class="reference external" href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">configure GitHub Pages to render the website</a>.</p></li>
+</ul>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -597,6 +625,7 @@ Ax = b
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-theorems-and-proofs">Definitions, Theorems and Proofs</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-the-blog-post">Publishing the blog post</a></li>
 </ul>
 
   </nav></div>

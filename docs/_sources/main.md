@@ -245,5 +245,40 @@ You can also reference equations easily. Use ```{eq}`eq1` ``` to reference {eq}`
 
 ## Definitions, Theorems and Proofs
 
+# Publishing the blog post
+We will use Github Pages to publish our post. Once we are ready to publish the post, do the following things:
+
+- Make sure to build the post one last time
+
+:::{code}
+jb build main.md
+:::
+
+- Move the contents of the `_build/_page/main/html` folder into a `docs` folder directly under the project root folder.
+
+```{code}
+mkdir docs
+
+cp -R ./_build/_page/main/html/* ./docs
+```
+- Create a `.nojekyll` file alongside our content files so that GitHub Pages treats our post as a static HTML website
+
+```
+touch ./docs/.nojekyll
+```
+
+- Finally, push the changes to GitHub and [configure GitHub Pages to render the website](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+
+
+
+
+
+
+
+
+
+
+
 
 
